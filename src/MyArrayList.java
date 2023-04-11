@@ -23,10 +23,15 @@ public class MyArrayList<T> implements MyList<T> {
         arr[size++] = element;
     }
 
+    @Override
+    public T get(int index) {
+        return null;
+    }
+
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
@@ -52,11 +57,6 @@ public class MyArrayList<T> implements MyList<T> {
     @Override
     public void clear() {
 
-    }
-
-    @Override
-    public T get(int index) {
-        return null;
     }
 
     @Override
