@@ -14,7 +14,7 @@ public class Main {
 //        marr.add(1231, 4);
 //        System.out.println(marr.get(0));
 //        System.out.println(marr.get(4));
-//        marr.add(100, 7);
+          //marr.add(100, 7);
 //        System.out.println(marr.get(7));
 //        marr.remove(7);
 //        System.out.println(marr.get(6));
@@ -23,5 +23,8 @@ public class Main {
 //        marr1.add("Sasha");
 //        System.out.println(marr1.get(0));
 //        System.out.println(marr1.contains("Sasha"));
+        //System.out.println(marr.contains(100));
+        marr.clear();
+        System.out.println(marr.size());
     }
 }
