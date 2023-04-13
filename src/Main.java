@@ -36,10 +36,12 @@ public class Main {
           MyArrayList<String> src1 = new MyArrayList<>();
           src1.add("Sasha", 0);
           src1.add("Sasha1", 1);
-          src1.add("Sasha2", 2);
-          src1.add("Sasha3", 3);
-        System.out.println(src1.size());
-        System.out.println(src1.indexOf("Sasha1"));
-        System.out.println(src1.indexOf("Sasha3"));
+          src1.add("Sasha1", 2);
+          src1.add("Sasha2", 3);
+          src1.add("Sasha3", 4);
+//        System.out.println(src1.size());
+//        System.out.println(src1.indexOf("Sasha1"));
+//        System.out.println(src1.indexOf("Sasha3"));
+        System.out.println(src1.lastIndexOf("Sasha123"));
     }
 }
