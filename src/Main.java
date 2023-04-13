@@ -30,5 +30,7 @@ public class Main {
         src.add("Sasha", 0);
         System.out.println(src.get(0));
         System.out.println(src.contains("Sasha"));
+        src.remove("Sasha");
+        System.out.println(src.contains("Sasha"));
     }
 }
