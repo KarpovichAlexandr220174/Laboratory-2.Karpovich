@@ -9,14 +9,13 @@ public class Main {
         marr.add(10);
         marr.add(11);
         marr.add(12);
-//        System.out.println(marr.get(0));
-//        System.out.println(marr.contains(1231));
+        //
         marr.add(3, 0);
         marr.add(1231, 4);
         System.out.println(marr.get(0));
         System.out.println(marr.get(4));
         marr.add(1231231, 7);
-//        System.out.println(marr.size());
+        //
         System.out.println(marr.get(7));
     }
 }

@@ -23,4 +23,6 @@ public interface MyList<T> {
 
     void sort();
 
+    void checkIndex(int index);
+
 }
