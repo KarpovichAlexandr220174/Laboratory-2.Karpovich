@@ -1,5 +1,3 @@
-import java.util.Iterator;
-
 public class MyArrayList<T> implements MyList<T> {
     private T[] arr;
     private int size;
@@ -48,7 +46,10 @@ public class MyArrayList<T> implements MyList<T> {
 
     @Override
     public void add(Object item, int index) {
-
+        if(size == arr.length){
+            increaseBuffer();
+        }
+        arr[index] = (T) item;
     }
 
     @Override
