@@ -43,7 +43,7 @@ public class MyArrayList<T> implements MyList<T> {
     @Override
     public boolean contains(Object o) {
         for (int i = 0; i < size; i++) {
-            if (arr[i].equals(o)) {
+            if (arr[i] == o) {
                 return true;
             }
         }
@@ -56,6 +56,7 @@ public class MyArrayList<T> implements MyList<T> {
             increaseBuffer();
         }
         arr[index] = (T) item;
+        size++;
     }
 
     @Override
@@ -64,8 +65,12 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     @Override
-    public T remove(int index) {
-        return null;
+    public void remove(int index) {
+        checkIndex(index);
+        for (int i = index + 1; i < size; i++) {
+            arr[i - 1] = arr[i];
+        }
+        size--;
     }
 
     @Override

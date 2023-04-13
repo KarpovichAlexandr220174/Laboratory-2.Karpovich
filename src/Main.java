@@ -10,12 +10,18 @@ public class Main {
         marr.add(11);
         marr.add(12);
         //
-        marr.add(3, 0);
-        marr.add(1231, 4);
-        System.out.println(marr.get(0));
-        System.out.println(marr.get(4));
-        marr.add(1231231, 7);
-        //
-        System.out.println(marr.get(7));
+//        marr.add(3, 0);
+//        marr.add(1231, 4);
+//        System.out.println(marr.get(0));
+//        System.out.println(marr.get(4));
+//        marr.add(100, 7);
+//        System.out.println(marr.get(7));
+//        marr.remove(7);
+//        System.out.println(marr.get(6));
+//        System.out.println(marr.contains(11));
+//        MyArrayList<String> marr1 = new MyArrayList<>();
+//        marr1.add("Sasha");
+//        System.out.println(marr1.get(0));
+//        System.out.println(marr1.contains("Sasha"));
     }
 }
