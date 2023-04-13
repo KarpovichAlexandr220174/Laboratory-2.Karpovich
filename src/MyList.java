@@ -11,7 +11,7 @@ public interface MyList<T> {
 
     boolean remove(T item);
 
-    T remove(int index);
+    void remove(int index);
 
     void clear();
 
