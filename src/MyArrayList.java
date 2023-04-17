@@ -138,4 +138,5 @@ public class MyArrayList<T> implements MyList<T>, Comparator<MyArrayList<T>> {
     public int compare(MyArrayList<T> o1, MyArrayList<T> o2) {
         return o1.size - o2.size;
     }
+
 }

@@ -9,21 +9,41 @@ public class Main {
             }
         };
 
-        MyArrayList<Integer> marr = new MyArrayList<>(integerComparator);
-        marr.add(6);
-        marr.add(1231);
-        marr.add(8);
-        marr.add(3453);
-        marr.add(10);
-        marr.add(5345);
-        marr.add(12);
+        Comparator<String> stringComparator = new Comparator<String>() {
+
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareTo(o2);
+            }
+        };
+        MyArrayList<String> marr2 = new MyArrayList<>(stringComparator);
+        marr2.add("Sasha");
+        marr2.add("Borya");
+        marr2.add("Nikolay");
+        marr2.add("Raxat");
+        for (int i = 0; i < marr2.size(); i++) {
+            System.out.println(marr2.get(i));
+        }
+        System.out.println("-----------------");
+        marr2.sort();
+        for (int i = 0; i < marr2.size(); i++) {
+            System.out.println(marr2.get(i));
+        }
+//        MyArrayList<Integer> marr = new MyArrayList<>(integerComparator);
+//        marr.add(6);
+//        marr.add(1231);
+//        marr.add(8);
+//        marr.add(3453);
+//        marr.add(10);
+//        marr.add(5345);
+//        marr.add(12);
 //        for (int i = 0; i < marr.size(); i++) {
 //            System.out.println(marr.get(i));
 //        }
-        marr.sort();
-        for (int i = 0; i < marr.size(); i++) {
-            System.out.println(marr.get(i));
-        }
+//        marr.sort();
+//        for (int i = 0; i < marr.size(); i++) {
+//            System.out.println(marr.get(i));
+//        }
 //        System.out.println(marr.indexOf(11));
         //
 //        marr.add(3, 0);
