@@ -1,34 +1,41 @@
 import java.util.Comparator;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Comparator<Integer> integerComparator = new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o1 - o2;
-            }
-        };
-
-        Comparator<String> stringComparator = new Comparator<String>() {
-
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.compareTo(o2);
-            }
-        };
-        MyArrayList<String> marr2 = new MyArrayList<>(stringComparator);
-        marr2.add("Sasha");
-        marr2.add("Borya");
-        marr2.add("Nikolay");
-        marr2.add("Raxat");
-        for (int i = 0; i < marr2.size(); i++) {
-            System.out.println(marr2.get(i));
-        }
-        System.out.println("-----------------");
-        marr2.sort();
-        for (int i = 0; i < marr2.size(); i++) {
-            System.out.println(marr2.get(i));
-        }
+        MyLinkedList<Integer> list = new MyLinkedList<Integer>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(61231);
+        System.out.println(list.size());
+//        Comparator<Integer> integerComparator = new Comparator<Integer>() {
+//            @Override
+//            public int compare(Integer o1, Integer o2) {
+//                return o1 - o2;
+//            }
+//        };
+//
+//        Comparator<String> stringComparator = new Comparator<String>() {
+//
+//            @Override
+//            public int compare(String o1, String o2) {
+//                return o1.compareTo(o2);
+//            }
+//        };
+//        MyArrayList<String> marr2 = new MyArrayList<>(stringComparator);
+//        marr2.add("Sasha");
+//        marr2.add("Borya");
+//        marr2.add("Nikolay");
+//        marr2.add("Raxat");
+//        for (int i = 0; i < marr2.size(); i++) {
+//            System.out.println(marr2.get(i));
+//        }
+//        System.out.println("-----------------");
+//        marr2.sort();
+//        for (int i = 0; i < marr2.size(); i++) {
+//            System.out.println(marr2.get(i));
+//        }
 //        MyArrayList<Integer> marr = new MyArrayList<>(integerComparator);
 //        marr.add(6);
 //        marr.add(1231);

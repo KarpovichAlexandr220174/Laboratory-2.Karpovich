@@ -14,16 +14,15 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
         }
     }
 
+    private Node<E> head;
+    private Node<E> tail;
+    private int size;
+
     public MyLinkedList() {
         head = null;
         tail = null;
         size = 0;
     }
-
-    private Node<E> head;
-    private Node<E> tail;
-    private int size;
-
 
     @Override
     public int size() {
@@ -31,18 +30,26 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
     }
 
     @Override
-    public boolean contains(Object o) {
-        return false;
-    }
-
-    @Override
     public void add(E item) {
-
+        Node<E> newNode = new Node<>(item, null, tail);
+        if (tail != null) {
+            tail.next = newNode;
+        }
+        tail = newNode;
+        if (head == null) {
+            head = newNode;
+        }
+        size++;
     }
 
     @Override
     public void add(E item, int index) {
 
+    }
+
+    @Override
+    public boolean contains(Object o) {
+        return false;
     }
 
     @Override
@@ -87,7 +94,7 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return MyLinkedListIterator();
+        return new MyLinkedListIterator();
     }
 
     private class MyLinkedListIterator implements Iterator<E> {
