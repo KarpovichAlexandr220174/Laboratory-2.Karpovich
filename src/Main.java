@@ -9,6 +9,9 @@ public class Main {
         list.add(3);
         list.add(61231);
         System.out.println(list.size());
+        list.add(55555, 0);
+        System.out.println(list.size());
+        System.out.println(list.contains(55555));
 //        Comparator<Integer> integerComparator = new Comparator<Integer>() {
 //            @Override
 //            public int compare(Integer o1, Integer o2) {

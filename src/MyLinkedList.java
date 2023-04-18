@@ -44,11 +44,50 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
 
     @Override
     public void add(E item, int index) {
-
+        checkIndex(index);
+        Node<E> newNode = new Node<>(item, null, null);
+        if (index == 0) {
+            newNode.next = head;
+            if (head != null) {
+                head.prev = newNode;
+            }
+            head = newNode;
+            if (tail == null) {
+                tail = newNode;
+            }
+            size++;
+        } else if (index == size) {
+            newNode.prev = tail;
+            if (tail != null) {
+                tail.next = newNode;
+            }
+            tail = newNode;
+            if (head == null) {
+                head = newNode;
+            }
+            size++;
+        } else {
+            Node<E> current = head;
+            for (int i = 0; i < index; i++) {
+                current = current.next;
+            }
+            newNode.prev = current.prev;
+            newNode.next = current;
+            current.prev.next = newNode;
+            current.prev = newNode;
+            size++;
+        }
     }
 
     @Override
     public boolean contains(Object o) {
+        Iterator<E> iterator = iterator();
+        while (iterator.hasNext()) {
+            E element = iterator.next();
+            if (o == null ? element == null : o.equals(element)) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -89,7 +128,9 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
 
     @Override
     public void checkIndex(int index) {
-
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
     }
 
     @Override
