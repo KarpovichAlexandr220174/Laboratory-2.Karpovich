@@ -3,7 +3,7 @@ public interface MyList<T> {
 
     boolean contains(Object o);
 
-    void increaseBuffer();
+    //void increaseBuffer();
 
     void add(T item);
 

@@ -1,4 +1,5 @@
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
     private static class Node<E> {
@@ -13,6 +14,12 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
         }
     }
 
+    public MyLinkedList() {
+        head = null;
+        tail = null;
+        size = 0;
+    }
+
     private Node<E> head;
     private Node<E> tail;
     private int size;
@@ -20,17 +27,12 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public boolean contains(Object o) {
         return false;
-    }
-
-    @Override
-    public void increaseBuffer() {
-
     }
 
     @Override
@@ -85,6 +87,31 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return MyLinkedListIterator();
     }
+
+    private class MyLinkedListIterator implements Iterator<E> {
+        private Node<E> current = head;
+
+        @Override
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        @Override
+        public E next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
+            E element = current.element;
+            current = current.next;
+            return element;
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
+    }
+
 }
