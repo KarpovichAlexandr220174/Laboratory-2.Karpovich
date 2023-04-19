@@ -1,21 +1,29 @@
 import java.util.Comparator;
 
+
+//implementation MyList and Comparator for realization all methods...
 public class MyArrayList<T> implements MyList<T>, Comparator<MyArrayList<T>> {
     private T[] arr;
     private int size;
     private Comparator<T> comparator;
 
     MyArrayList() {
+        //standard constructor
+
         this.arr = (T[]) new Object[5];
         this.size = 0;
     }
 
     MyArrayList(Comparator<T> comparator) {
+        //also constructor for using "sort" in main with
+        //Comparator<> ... = new Comparator<>()
+
         this.arr = (T[]) new Object[5];
         this.size = 0;
         this.comparator = comparator;
     }
 
+    //main methods of MyArrayList...
 
     public void checkIndex(int index) {
         if (index < 0 || index >= size) {
@@ -134,6 +142,7 @@ public class MyArrayList<T> implements MyList<T>, Comparator<MyArrayList<T>> {
         }
     }
 
+    //also compare method for using it in sort method related to comparator
     @Override
     public int compare(MyArrayList<T> o1, MyArrayList<T> o2) {
         return o1.size - o2.size;

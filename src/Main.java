@@ -1,8 +1,12 @@
 import java.util.Comparator;
 import java.util.List;
 
+//Main with checking all my project methods...
 public class Main {
     public static void main(String[] args) {
+
+        //Comparator with compare method for using in collection
+
         Comparator<Integer> integerComparator = new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {

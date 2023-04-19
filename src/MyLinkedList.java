@@ -15,11 +15,14 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E>, Comparator<MyLin
 
     private static class Node<E> {
         //main parameters of Node<E> class;
+
         E element;
         Node<E> next;
         Node<E> prev;
 
         public Node(E element, Node<E> next, Node<E> prev) {
+            //constructor Node, I've used it for realization add() methods
+
             this.element = element;
             this.next = next;
             this.prev = prev;
@@ -32,6 +35,8 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E>, Comparator<MyLin
     private int size;
 
     public MyLinkedList() {
+        //standard constructor
+
         head = null;
         tail = null;
         size = 0;
@@ -40,6 +45,7 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E>, Comparator<MyLin
     MyLinkedList(Comparator<E> comparator) {
         //constructor for using "sort" in main with
         // Comparator<> ... = new Comparator<>()
+
         head = null;
         tail = null;
         size = 0;
@@ -220,6 +226,7 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E>, Comparator<MyLin
     @Override
     public void checkIndex(int index) {
         //Checking index method, very useful for fast checking in another methods
+
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
@@ -227,6 +234,7 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E>, Comparator<MyLin
 
     public Node<E> getNode(int index) {
         //useful method for using in another methods for getting a current element of "linked list"
+
         checkIndex(index);
         Node<E> current = head;
         for (int i = 0; i < index; i++) {
@@ -242,6 +250,7 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E>, Comparator<MyLin
 
     private class MyLinkedListIterator implements Iterator<E> {
         //Iterator with main methods for realization algorithms of another methods in MyLinkedList
+
         private Node<E> current = head;
 
         @Override
