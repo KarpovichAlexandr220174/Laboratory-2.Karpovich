@@ -147,8 +147,8 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
     public int indexOf(Object o) {
         Node<E> current = head;
         int index = 0;
-        while(current != null){
-            if(o == null ? current.element == null : o.equals(current.element)){
+        while (current != null) {
+            if (o == null ? current.element == null : o.equals(current.element)) {
                 return index;
             }
             current = current.next;
@@ -159,7 +159,17 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
 
     @Override
     public int lastIndexOf(Object o) {
-        return 0;
+        Node<E> current = head;
+        int index = 0;
+        int lastIndex = -1;
+        while (current != null) {
+            if (o == null ? current.element == null : o.equals(current.element)) {
+                lastIndex = index;
+            }
+            current = current.next;
+            index++;
+        }
+        return lastIndex;
     }
 
     @Override
@@ -173,6 +183,7 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
             throw new IndexOutOfBoundsException();
         }
     }
+
     public Node<E> getNode(int index) {
         checkIndex(index);
         Node<E> current = head;
