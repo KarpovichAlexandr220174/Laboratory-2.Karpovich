@@ -3,6 +3,24 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        Comparator<Integer> integerComparator = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1 - o2;
+            }
+        };
+
+        MyLinkedList<Integer> mal = new MyLinkedList<>(integerComparator);
+        mal.add(1);
+        mal.add(2);
+        mal.add(1231);
+        mal.add(123);
+        mal.add(53453);
+        mal.add(34234);
+        mal.sort();
+        for(int s : mal){
+            System.out.println(s);
+        }
 //        MyLinkedList<Integer> list = new MyLinkedList<Integer>();
 //        list.add(123, 0);
 //        list.add(124, 1);
@@ -15,19 +33,19 @@ public class Main {
 //        list.clear();
 //        System.out.println(list.size());
 //        System.out.println(list.indexOf(123));
-        MyLinkedList<String> mal = new MyLinkedList<String>();
-        mal.add("S", 0);
-        mal.add("S", 1);
-        mal.add("S", 2);
-        mal.add("S", 3);
-        mal.add("S", 4);
-        mal.add("S", 5);
-        mal.add("D", 6);
-        mal.add("D", 7);
-        System.out.println(mal.lastIndexOf("D"));
-        System.out.println(mal.lastIndexOf("S"));
-        System.out.println(mal.indexOf("S"));
-        System.out.println(mal.lastIndexOf("DASD"));
+//
+//        MyLinkedList<String> mal = new MyLinkedList<String>();
+//        mal.add("S", 0);
+//        mal.add("S", 1);
+//        mal.add("S", 2);
+//        mal.add("S", 3);
+//        mal.add("S", 4);
+//        mal.add("S", 5);
+//        mal.add("D", 6);
+//        mal.add("D", 7);
+//        System.out.println(mal.size());
+//        System.out.println(mal.contains("D"));
+
 //        System.out.println(mal.size());
 //        System.out.println(mal.indexOf("S"));
 //        System.out.println(mal.contains("S"));

@@ -1,7 +1,9 @@
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
+public class MyLinkedList<E> implements MyList<E>, Iterable<E>, Comparator<MyLinkedList<E>> {
+
     private static class Node<E> {
         E element;
         Node<E> next;
@@ -14,6 +16,7 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
         }
     }
 
+    private Comparator<E> comparator;
     private Node<E> head;
     private Node<E> tail;
     private int size;
@@ -23,6 +26,14 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
         tail = null;
         size = 0;
     }
+
+    MyLinkedList(Comparator<E> comparator) {
+        head = null;
+        tail = null;
+        size = 0;
+        this.comparator = comparator;
+    }
+
 
     @Override
     public int size() {
@@ -174,7 +185,24 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
 
     @Override
     public void sort() {
-
+        if (size <= 1) {
+            return;
+        }
+        Node<E> current = head.next;
+        while (current != null) {
+            E key = current.element;
+            Node<E> previous = current.prev;
+            while (previous != null && comparator.compare(previous.element, key) > 0) {
+                previous.next.element = previous.element;
+                previous = previous.prev;
+            }
+            if (previous == null) {
+                head.element = key;
+            } else {
+                previous.next.element = key;
+            }
+            current = current.next;
+        }
     }
 
     @Override
@@ -220,6 +248,11 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
         public void remove() {
             throw new UnsupportedOperationException();
         }
+    }
+
+    @Override
+    public int compare(MyLinkedList<E> o1, MyLinkedList<E> o2) {
+        return o1.size - o2.size;
     }
 
 }
