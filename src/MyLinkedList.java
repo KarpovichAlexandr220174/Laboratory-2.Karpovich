@@ -44,38 +44,38 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
 
     @Override
     public void add(E item, int index) {
-        checkIndex(index);
-        Node<E> newNode = new Node<>(item, null, null);
-        if (index == 0) {
-            newNode.next = head;
-            if (head != null) {
-                head.prev = newNode;
-            }
-            head = newNode;
-            if (tail == null) {
-                tail = newNode;
-            }
-            size++;
-        } else if (index == size) {
-            newNode.prev = tail;
-            if (tail != null) {
-                tail.next = newNode;
-            }
-            tail = newNode;
-            if (head == null) {
-                head = newNode;
-            }
-            size++;
+        if (size == 0 && index == 0) {
+            add(item);
         } else {
-            Node<E> current = head;
-            for (int i = 0; i < index; i++) {
-                current = current.next;
+            Node<E> newNode = new Node<>(item, null, null);
+            if (index == 0) {
+                newNode.next = head;
+                if (head != null) {
+                    head.prev = newNode;
+                }
+                head = newNode;
+                if (tail == null) {
+                    tail = newNode;
+                }
+                size++;
+            } else if (index == size) {
+                newNode.prev = tail;
+                if (tail != null) {
+                    tail.next = newNode;
+                }
+                tail = newNode;
+                if (head == null) {
+                    head = newNode;
+                }
+                size++;
+            } else {
+                Node<E> current = getNode(index);
+                newNode.prev = current.prev;
+                newNode.next = current;
+                current.prev.next = newNode;
+                current.prev = newNode;
+                size++;
             }
-            newNode.prev = current.prev;
-            newNode.next = current;
-            current.prev.next = newNode;
-            current.prev = newNode;
-            size++;
         }
     }
 
@@ -121,12 +121,26 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
 
     @Override
     public void clear() {
-
+        Node<E> current = head;
+        while (current != null) {
+            Node<E> next = current.next;
+            current.prev = null;
+            current.next = null;
+            current = next;
+        }
+        head = null;
+        tail = null;
+        size = 0;
     }
 
     @Override
     public E get(int index) {
-        return null;
+        checkIndex(index);
+        Node<E> current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current.element;
     }
 
     @Override
@@ -150,7 +164,6 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
             throw new IndexOutOfBoundsException();
         }
     }
-
     public Node<E> getNode(int index) {
         checkIndex(index);
         Node<E> current = head;
