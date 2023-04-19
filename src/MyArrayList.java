@@ -105,7 +105,7 @@ public class MyArrayList<T> implements MyList<T>, Comparator<MyArrayList<T>> {
                 index1 = i;
             }
         }
-        return index1;
+        return -1;
     }
 
     @Override
