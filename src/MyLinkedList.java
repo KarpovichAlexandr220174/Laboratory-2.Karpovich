@@ -96,8 +96,11 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
         checkIndex(index);
         if (index == 0) {
             head = head.next;
+        } else {
+            Node<E> before = getNode(index - 1);
+            Node<E> target = before.next;
+            before.next = before.next.next;
         }
-
         size--;
     }
 
