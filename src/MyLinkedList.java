@@ -92,12 +92,17 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
     }
 
     @Override
-    public void remove(E item) {
+    public void remove(int index) {
+        checkIndex(index);
+        if (index == 0) {
+            head = head.next;
+        }
 
+        size--;
     }
 
     @Override
-    public void remove(int index) {
+    public void remove(E item) {
 
     }
 
@@ -131,6 +136,15 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
+    }
+
+    public Node<E> getNode(int index) {
+        checkIndex(index);
+        Node<E> current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current;
     }
 
     @Override
