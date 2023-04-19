@@ -70,7 +70,7 @@ public class MyArrayList<T> implements MyList<T>, Comparator<MyArrayList<T>> {
     }
 
     @Override
-    public void remove(Object item) {
+    public void remove1(Object item) {
         int newIndex = 0;
         for (int i = 0; i < size; i++) {
             if (!arr[i].equals(item)) {

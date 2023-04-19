@@ -7,12 +7,19 @@ public class Main {
         list.add(1);
         list.add(2);
         list.add(3);
-        //System.out.println(list.size());
-        list.remove(0);
-        //list.remove(1);
-        //list.remove(2);
-        System.out.println(list.contains(1));
+        list.add(123123);
+        list.remove1(123123);
+        System.out.println(list.contains(123123));
         System.out.println(list.size());
+        list.remove1(2);
+        System.out.println(list.contains(2));
+        System.out.println(list.size());
+        //System.out.println(list.size());
+//        list.remove(0);
+//        //list.remove(1);
+//        //list.remove(2);
+//        System.out.println(list.contains(1));
+//        System.out.println(list.size());
 //        Comparator<Integer> integerComparator = new Comparator<Integer>() {
 //            @Override
 //            public int compare(Integer o1, Integer o2) {

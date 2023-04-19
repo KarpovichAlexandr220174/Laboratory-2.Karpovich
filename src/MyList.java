@@ -9,7 +9,7 @@ public interface MyList<T> {
 
     void add(T item, int index);
 
-    void remove(T item);
+    void remove1(T item);
 
     void remove(int index);
 

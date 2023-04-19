@@ -105,9 +105,19 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E> {
     }
 
     @Override
-    public void remove(E item) {
-
+    public void remove1(E item) {
+        Node<E> current = head;
+        int index = 0;
+        while (current != null) {
+            if (item == null ? current.element == null : item.equals(current.element)) {
+                remove(index);
+                return;
+            }
+            current = current.next;
+            index++;
+        }
     }
+
 
     @Override
     public void clear() {
