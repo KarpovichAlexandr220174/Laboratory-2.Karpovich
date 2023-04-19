@@ -2,9 +2,19 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+
+//implementation MyList, Iterable and Comparator for realization all methods...
 public class MyLinkedList<E> implements MyList<E>, Iterable<E>, Comparator<MyLinkedList<E>> {
+    //MyList is main interface
+    //Iterable is interface for using for-each in collections and for realization any methods
+    //Comparator is for coding a "sort" method for collections
+    //<E> is generic for using all types in collections
+
+
+    //Node class is using like a main part of "linked list" algorithms
 
     private static class Node<E> {
+        //main parameters of Node<E> class;
         E element;
         Node<E> next;
         Node<E> prev;
@@ -15,7 +25,7 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E>, Comparator<MyLin
             this.prev = prev;
         }
     }
-
+    //main parameters of MyLinkedList class
     private Comparator<E> comparator;
     private Node<E> head;
     private Node<E> tail;
@@ -28,13 +38,15 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E>, Comparator<MyLin
     }
 
     MyLinkedList(Comparator<E> comparator) {
+        //constructor for using "sort" in main with
+        // Comparator<> ... = new Comparator<>()
         head = null;
         tail = null;
         size = 0;
         this.comparator = comparator;
     }
 
-
+    //main methods of MyLinkedList...
     @Override
     public int size() {
         return size;
@@ -207,12 +219,14 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E>, Comparator<MyLin
 
     @Override
     public void checkIndex(int index) {
+        //Checking index method, very useful for fast checking in another methods
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
     }
 
     public Node<E> getNode(int index) {
+        //useful method for using in another methods for getting a current element of "linked list"
         checkIndex(index);
         Node<E> current = head;
         for (int i = 0; i < index; i++) {
@@ -227,6 +241,7 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E>, Comparator<MyLin
     }
 
     private class MyLinkedListIterator implements Iterator<E> {
+        //Iterator with main methods for realization algorithms of another methods in MyLinkedList
         private Node<E> current = head;
 
         @Override
@@ -250,6 +265,7 @@ public class MyLinkedList<E> implements MyList<E>, Iterable<E>, Comparator<MyLin
         }
     }
 
+    //compare method for using it in sort method related to comparator
     @Override
     public int compare(MyLinkedList<E> o1, MyLinkedList<E> o2) {
         return o1.size - o2.size;

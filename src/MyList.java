@@ -1,4 +1,7 @@
 public interface MyList<T> {
+
+    //this is an interface "MyList" with main methods which must be implemented in MyArrayList and MyLinkedList
+
     int size();
 
     boolean contains(Object o);
