@@ -10,6 +10,8 @@ public interface MyList<T> {
 
     void add(T item);
 
+    void add(T[] arr);
+
     void add(T item, int index);
 
     void remove1(T item);

@@ -6,12 +6,24 @@ public class MyArrayList<T> implements MyList<T>, Comparator<MyArrayList<T>> {
     private T[] arr;
     private int size;
     private Comparator<T> comparator;
+    public T[] massiv;
+
+//    MyArrayList(T[] massiv) {
+//        this.massiv = massiv;
+//        this.size = massiv.length;
+//    }
 
     MyArrayList() {
         //standard constructor
 
         this.arr = (T[]) new Object[5];
         this.size = 0;
+    }
+
+    public void add(T[] mas) {
+        for (int i = 0; i < mas.length; i++) {
+            add(mas[i]);
+        }
     }
 
     MyArrayList(Comparator<T> comparator) {
@@ -46,6 +58,7 @@ public class MyArrayList<T> implements MyList<T>, Comparator<MyArrayList<T>> {
         }
         arr[size++] = element;
     }
+
 
     @Override
     public T get(int index) {

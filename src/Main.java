@@ -4,27 +4,30 @@ import java.util.List;
 //Main with checking all my project methods...
 public class Main {
     public static void main(String[] args) {
-
+        MyArrayList<Integer> mrtl = new MyArrayList<>();
+        Integer[]arr = new Integer[]{1,2,3,4,5,6};
+        mrtl.add(arr);
+        System.out.println(mrtl.get(5));
         //Comparator with compare method for using in collection
 
-        Comparator<Integer> integerComparator = new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o1 - o2;
-            }
-        };
-
-        MyLinkedList<Integer> mal = new MyLinkedList<>(integerComparator);
-        mal.add(1);
-        mal.add(2);
-        mal.add(1231);
-        mal.add(123);
-        mal.add(53453);
-        mal.add(34234);
-        mal.sort();
-        for(int s : mal){
-            System.out.println(s);
-        }
+//        Comparator<Integer> integerComparator = new Comparator<Integer>() {
+//            @Override
+//            public int compare(Integer o1, Integer o2) {
+//                return o1 - o2;
+//            }
+//        };
+//
+//        MyLinkedList<Integer> mal = new MyLinkedList<>(integerComparator);
+//        mal.add(1);
+//        mal.add(2);
+//        mal.add(1231);
+//        mal.add(123);
+//        mal.add(53453);
+//        mal.add(34234);
+//        mal.sort();
+//        for(int s : mal){
+//            System.out.println(s);
+//        }
 //        MyLinkedList<Integer> list = new MyLinkedList<Integer>();
 //        list.add(123, 0);
 //        list.add(124, 1);
