@@ -16,12 +16,18 @@ public class MyLinkedListStack<T> implements ListForStack<T> {
 
     @Override
     public T pop() {
-
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return linkedList.removeFirst();
     }
 
     @Override
     public T peek() {
-        return null;
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return linkedList.getFirst();
     }
 
     @Override
