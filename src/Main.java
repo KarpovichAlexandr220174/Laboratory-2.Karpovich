@@ -14,6 +14,8 @@ public class Main {
         mrlst.push(6);
         System.out.println(mrlst.isEmpty());
         System.out.println(mrlst.size());
+        mrlst.pop();
+        System.out.println(mrlst.size());
 
 
 //        MyArrayList<Integer> mrtl = new MyArrayList<>();
