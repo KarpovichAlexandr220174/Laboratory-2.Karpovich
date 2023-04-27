@@ -12,9 +12,9 @@ public class Main {
         mlkd.push(3);
         mlkd.push(4);
         System.out.println(mlkd.size());
-        System.out.println(mlkd.peek());
         mlkd.pop();
-        System.out.println(mlkd.size());
+        System.out.println(mlkd.peek());
+
 
 
 

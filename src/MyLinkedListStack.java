@@ -21,7 +21,6 @@ public class MyLinkedListStack<T> implements ListForStack<T> {
         }
         return linkedList.removeFirst();
     }
-
     @Override
     public T peek() {
         if (isEmpty()) {
