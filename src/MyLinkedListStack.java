@@ -11,12 +11,12 @@ public class MyLinkedListStack<T> implements ListForStack<T> {
 
     @Override
     public void push(T element) {
-
+        linkedList.addFirst(element);
     }
 
     @Override
     public T pop() {
-        return null;
+
     }
 
     @Override
