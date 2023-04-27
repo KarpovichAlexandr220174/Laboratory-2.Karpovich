@@ -4,19 +4,24 @@ import java.util.List;
 //Main with checking all my project methods...
 public class Main {
     public static void main(String[] args) {
-        MyArrayListStack<Integer> mrlst = new MyArrayListStack<>();
-        System.out.println(mrlst.isEmpty());
-        mrlst.push(1);
-        mrlst.push(2);
-        mrlst.push(3);
-        mrlst.push(4);
-        mrlst.push(5);
-        mrlst.push(6);
-        System.out.println(mrlst.isEmpty());
-        System.out.println(mrlst.size());
-        mrlst.pop();
-        System.out.println(mrlst.size());
-        System.out.println(mrlst.peek());
+        MyLinkedListStack<Integer> mlkd = new MyLinkedListStack<>();
+        System.out.println(mlkd.size());
+
+
+
+//        MyArrayListStack<Integer> mrlst = new MyArrayListStack<>();
+//        System.out.println(mrlst.isEmpty());
+//        mrlst.push(1);
+//        mrlst.push(2);
+//        mrlst.push(3);
+//        mrlst.push(4);
+//        mrlst.push(5);
+//        mrlst.push(6);
+//        System.out.println(mrlst.isEmpty());
+//        System.out.println(mrlst.size());
+//        mrlst.pop();
+//        System.out.println(mrlst.size());
+//        System.out.println(mrlst.peek());
 
 
 //        MyArrayList<Integer> mrtl = new MyArrayList<>();
