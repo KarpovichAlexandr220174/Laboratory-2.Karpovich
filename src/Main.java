@@ -16,6 +16,7 @@ public class Main {
         System.out.println(mrlst.size());
         mrlst.pop();
         System.out.println(mrlst.size());
+        System.out.println(mrlst.peek());
 
 
 //        MyArrayList<Integer> mrtl = new MyArrayList<>();
