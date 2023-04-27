@@ -26,11 +26,11 @@ public class MyArrayListStack<T> implements ListForStack<T> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return arraylist.isEmpty();
     }
 
     @Override
     public int size() {
-        return 0;
+        return arraylist.size();
     }
 }
