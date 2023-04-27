@@ -12,6 +12,7 @@ public class Main {
         mrlst.push(4);
         mrlst.push(5);
         mrlst.push(6);
+        System.out.println(mrlst.isEmpty());
 
 //        MyArrayList<Integer> mrtl = new MyArrayList<>();
 //        Integer[]arr = new Integer[]{1,2,3,4,5,6};
