@@ -14,11 +14,6 @@ public class Main {
         System.out.println(mlkd.size());
         mlkd.pop();
         System.out.println(mlkd.peek());
-
-
-
-
-
 //        MyArrayListStack<Integer> mrlst = new MyArrayListStack<>();
 //        System.out.println(mrlst.isEmpty());
 //        mrlst.push(1);
