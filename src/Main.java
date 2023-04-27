@@ -6,6 +6,12 @@ public class Main {
     public static void main(String[] args) {
         MyArrayListStack<Integer> mrlst = new MyArrayListStack<>();
         System.out.println(mrlst.isEmpty());
+        mrlst.push(1);
+        mrlst.push(2);
+        mrlst.push(3);
+        mrlst.push(4);
+        mrlst.push(5);
+        mrlst.push(6);
 
 //        MyArrayList<Integer> mrtl = new MyArrayList<>();
 //        Integer[]arr = new Integer[]{1,2,3,4,5,6};
