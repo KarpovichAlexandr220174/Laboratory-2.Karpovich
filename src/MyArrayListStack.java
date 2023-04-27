@@ -3,7 +3,7 @@ import java.util.EmptyStackException;
 
 public class MyArrayListStack<T> implements ListForStack<T> {
 
-    private ArrayList arraylist;
+    private ArrayList<T> arraylist;
 
     MyArrayListStack() {
         arraylist = new ArrayList<>();
@@ -19,7 +19,7 @@ public class MyArrayListStack<T> implements ListForStack<T> {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
-        return (T) arraylist.remove(size() - 1);
+        return arraylist.remove(size() - 1);
     }
 
     @Override
@@ -27,7 +27,7 @@ public class MyArrayListStack<T> implements ListForStack<T> {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
-        return (T) arraylist.get(size() - 1);
+        return arraylist.get(size() - 1);
     }
 
     @Override
