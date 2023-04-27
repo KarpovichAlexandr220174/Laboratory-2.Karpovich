@@ -11,17 +11,23 @@ public class MyArrayListStack<T> implements ListForStack<T> {
 
     @Override
     public void push(T element) {
-
+        arraylist.add(element);
     }
 
     @Override
     public T pop() {
-        return null;
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return (T) arraylist.remove(size() - 1);
     }
 
     @Override
     public T peek() {
-        return null;
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return (T) arraylist.get(size() - 1);
     }
 
     @Override
