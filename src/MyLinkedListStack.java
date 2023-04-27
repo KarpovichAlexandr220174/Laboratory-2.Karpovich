@@ -26,11 +26,11 @@ public class MyLinkedListStack<T> implements ListForStack<T> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return linkedList.isEmpty();
     }
 
     @Override
     public int size() {
-        return 0;
+        return linkedList.size();
     }
 }
