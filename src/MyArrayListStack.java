@@ -1,5 +1,13 @@
+import java.util.ArrayList;
+import java.util.EmptyStackException;
+
 public class MyArrayListStack<T> implements ListForStack<T> {
 
+    private ArrayList arraylist;
+
+    MyArrayListStack() {
+        arraylist = new ArrayList<>();
+    }
 
     @Override
     public void push(T element) {
