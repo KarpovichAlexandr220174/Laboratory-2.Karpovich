@@ -7,7 +7,12 @@ public class Main {
         MyLinkedListStack<Integer> mlkd = new MyLinkedListStack<>();
         System.out.println(mlkd.size());
         System.out.println(mlkd.isEmpty());
-
+        mlkd.push(1);
+        mlkd.push(2);
+        mlkd.push(3);
+        mlkd.push(4);
+        System.out.println(mlkd.size());
+        System.out.println(mlkd.peek());
 
 
 
