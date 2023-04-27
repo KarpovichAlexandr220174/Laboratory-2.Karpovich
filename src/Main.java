@@ -4,11 +4,14 @@ import java.util.List;
 //Main with checking all my project methods...
 public class Main {
     public static void main(String[] args) {
-        MyArrayList<Integer> mrtl = new MyArrayList<>();
-        Integer[]arr = new Integer[]{1,2,3,4,5,6};
-        mrtl.add(123);
-        mrtl.add(arr);
-        System.out.println(mrtl.get(1));
+        MyArrayListStack<Integer> mrlst = new MyArrayListStack<>();
+        System.out.println(mrlst.isEmpty());
+
+//        MyArrayList<Integer> mrtl = new MyArrayList<>();
+//        Integer[]arr = new Integer[]{1,2,3,4,5,6};
+//        mrtl.add(123);
+//        mrtl.add(arr);
+//        System.out.println(mrtl.get(1));
         //Comparator with compare method for using in collection
 
 //        Comparator<Integer> integerComparator = new Comparator<Integer>() {
