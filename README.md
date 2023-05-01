@@ -32,4 +32,4 @@ Both implementations implement the same ListForQueue interface, which defines th
     size(): returns the number of elements in the queue.
     iterator(): returns an iterator over the elements in the queue in proper sequence.
 
-The classes throw an NoSuchElementException if dequeue() or peek() is called on an empty queue.
+The classes throw a NoSuchElementException if dequeue() or peek() is called on an empty queue.
