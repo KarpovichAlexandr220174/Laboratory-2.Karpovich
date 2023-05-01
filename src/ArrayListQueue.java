@@ -16,7 +16,7 @@ public class ArrayListQueue<T> implements ListForQueue<T> {
 
     @Override
     public T dequeue() {
-        if(isEmpty()){
+        if (isEmpty()) {
             throw new NoSuchElementException();
         }
         return arrayList.remove(0);
@@ -24,7 +24,10 @@ public class ArrayListQueue<T> implements ListForQueue<T> {
 
     @Override
     public T peek() {
-        return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return arrayList.get(0);
     }
 
     @Override
