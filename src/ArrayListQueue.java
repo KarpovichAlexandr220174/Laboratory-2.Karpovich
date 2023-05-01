@@ -11,7 +11,7 @@ public class ArrayListQueue<T> implements ListForQueue<T> {
 
     @Override
     public void enqueue(T element) {
-
+        arrayList.add(element);
     }
 
     @Override
@@ -26,11 +26,11 @@ public class ArrayListQueue<T> implements ListForQueue<T> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return arrayList.isEmpty();
     }
 
     @Override
     public int size() {
-        return 0;
+        return arrayList.size();
     }
 }
