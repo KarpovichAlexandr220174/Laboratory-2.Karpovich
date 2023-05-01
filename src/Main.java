@@ -4,20 +4,34 @@ import java.util.List;
 //Main with checking all my project methods...
 public class Main {
     public static void main(String[] args) {
-        ArrayListQueue<Integer> qqq = new ArrayListQueue<>();
-        qqq.enqueue(1);
-        qqq.enqueue(2);
-        qqq.enqueue(3);
-        for (int i : qqq) {
-            System.out.println(i);
-        }
-        qqq.dequeue();
-        for (int i : qqq) {
-            System.out.println(i);
-        }
-        System.out.println(qqq.isEmpty());
-        System.out.println(qqq.size());
-        System.out.println(qqq.peek());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        ArrayListQueue<Integer> qqq = new ArrayListQueue<>();
+//        qqq.enqueue(1);
+//        qqq.enqueue(2);
+//        qqq.enqueue(3);
+//        for (int i : qqq) {
+//            System.out.println(i);
+//        }
+//        qqq.dequeue();
+//        for (int i : qqq) {
+//            System.out.println(i);
+//        }
+//        System.out.println(qqq.isEmpty());
+//        System.out.println(qqq.size());
+//        System.out.println(qqq.peek());
 
 
 
