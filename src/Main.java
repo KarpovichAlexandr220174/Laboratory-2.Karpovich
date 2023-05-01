@@ -4,6 +4,16 @@ import java.util.List;
 //Main with checking all my project methods...
 public class Main {
     public static void main(String[] args) {
+        ArrayListQueue<Integer> qqq = new ArrayListQueue<>();
+        qqq.enqueue(1);
+        qqq.enqueue(2);
+        qqq.enqueue(3);
+////        for (int i : qqq) {
+////            System.out.println(i);
+////        }
+
+
+//
 //        LinkedListStack<Integer> mlkd = new LinkedListStack<>();
 //        mlkd.push(1);
 //        mlkd.push(2);

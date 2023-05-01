@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.EmptyStackException;
+import java.util.Iterator;
 
-public class ArrayListStack<T> implements ListForStack<T> {
+public class ArrayListStack<T> implements ListForStack<T>, Iterable<T> {
 
     private ArrayList<T> arraylist;
 
@@ -38,5 +39,10 @@ public class ArrayListStack<T> implements ListForStack<T> {
     @Override
     public int size() {
         return arraylist.size();
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return arraylist.iterator();
     }
 }

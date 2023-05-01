@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class ArrayListQueue<T> implements ListForQueue<T> {
+public class ArrayListQueue<T> implements ListForQueue<T>, Iterable<T> {
     private ArrayList<T> arrayList;
 
     ArrayListQueue() {
@@ -38,5 +39,10 @@ public class ArrayListQueue<T> implements ListForQueue<T> {
     @Override
     public int size() {
         return arrayList.size();
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return arrayList.iterator();
     }
 }

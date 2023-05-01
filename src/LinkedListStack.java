@@ -1,7 +1,8 @@
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.EmptyStackException;
 
-public class LinkedListStack<T> implements ListForStack<T> {
+public class LinkedListStack<T> implements ListForStack<T>, Iterable<T> {
 
     private LinkedList<T> linkedList;
 
@@ -21,6 +22,7 @@ public class LinkedListStack<T> implements ListForStack<T> {
         }
         return linkedList.removeFirst();
     }
+
     @Override
     public T peek() {
         if (isEmpty()) {
@@ -37,5 +39,10 @@ public class LinkedListStack<T> implements ListForStack<T> {
     @Override
     public int size() {
         return linkedList.size();
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return linkedList.iterator();
     }
 }
