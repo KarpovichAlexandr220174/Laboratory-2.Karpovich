@@ -8,12 +8,19 @@ public class Main {
         qqq.enqueue(1);
         qqq.enqueue(2);
         qqq.enqueue(3);
-////        for (int i : qqq) {
-////            System.out.println(i);
-////        }
+        for (int i : qqq) {
+            System.out.println(i);
+        }
+        qqq.dequeue();
+        for (int i : qqq) {
+            System.out.println(i);
+        }
+        System.out.println(qqq.isEmpty());
+        System.out.println(qqq.size());
+        System.out.println(qqq.peek());
 
 
-//
+
 //        LinkedListStack<Integer> mlkd = new LinkedListStack<>();
 //        mlkd.push(1);
 //        mlkd.push(2);
