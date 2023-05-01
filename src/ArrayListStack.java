@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.EmptyStackException;
 
-public class MyArrayListStack<T> implements ListForStack<T> {
+public class ArrayListStack<T> implements ListForStack<T> {
 
     private ArrayList<T> arraylist;
 
-    MyArrayListStack() {
+    ArrayListStack() {
         arraylist = new ArrayList<>();
     }
 

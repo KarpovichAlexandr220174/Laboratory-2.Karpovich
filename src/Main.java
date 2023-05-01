@@ -4,7 +4,7 @@ import java.util.List;
 //Main with checking all my project methods...
 public class Main {
     public static void main(String[] args) {
-        MyLinkedListStack<Integer> mlkd = new MyLinkedListStack<>();
+        LinkedListStack<Integer> mlkd = new LinkedListStack<>();
         mlkd.push(1);
         mlkd.push(2);
         mlkd.push(3);
@@ -15,7 +15,7 @@ public class Main {
         mlkd.pop();
         System.out.println(mlkd.peek());
 
-//        MyArrayListStack<Integer> mrlst = new MyArrayListStack<>();
+//        ArrayListStack<Integer> mrlst = new ArrayListStack<>();
 //        System.out.println(mrlst.isEmpty());
 //        mrlst.push(1);
 //        mrlst.push(2);

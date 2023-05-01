@@ -1,11 +1,11 @@
 import java.util.LinkedList;
 import java.util.EmptyStackException;
 
-public class MyLinkedListStack<T> implements ListForStack<T> {
+public class LinkedListStack<T> implements ListForStack<T> {
 
     private LinkedList<T> linkedList;
 
-    MyLinkedListStack() {
+    LinkedListStack() {
         linkedList = new LinkedList<>();
     }
 
