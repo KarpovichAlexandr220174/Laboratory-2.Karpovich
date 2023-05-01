@@ -1,11 +1,11 @@
 # Laboratory-2.Karpovich
 ArrayListStack, LinkedListStack, ArrayListQueue, LinkedListQueue
 
-ArrayListStack:
-This Java class implements the ListForStack interface and provides a stack implementation using an ArrayList. 
-The class is iterable, and the iterator is implemented using the ArrayList iterator.
+Stack Implementations:
+These Java classes implement the ListForStack interface and provide a stack implementation using an ArrayList and LinkedList. 
+The classes are iterable, and the iterator is implemented using the ArrayList and LinkedList iterator.
 
-The ArrayListStack class has the following methods:
+The classes have the following methods:
 
     push(T element): adds an element to the stack.
     pop(): removes and returns the top element from the stack.
@@ -14,9 +14,22 @@ The ArrayListStack class has the following methods:
     size(): returns the size of the stack.
     iterator(): returns an iterator for the stack.
 
-The class throws an EmptyStackException if pop() or peek() is called on an empty stack.
+The classes throw an EmptyStackException if pop() or peek() is called on an empty stack.
 
-This implementation of a stack is based on the ArrayList data structure, which means that it is not as memory-efficient as a linked list implementation. 
-However, it provides constant-time access to elements and has a better worst-case time complexity for some operations.
+Queue Implementations:
 
-LinkedListStack:
+This repository contains two implementations of a Queue data structure in Java:
+
+    ArrayListQueue: an implementation using an ArrayList.
+    LinkedListQueue: an implementation using a LinkedList.
+
+Both implementations implement the same ListForQueue interface, which defines the following methods:
+
+    enqueue(T element): adds the specified element to the end of the queue.
+    dequeue(): retrieves and removes the head of the queue.
+    peek(): retrieves, but does not remove, the head of the queue.
+    isEmpty(): returns true if the queue is empty, false otherwise.
+    size(): returns the number of elements in the queue.
+    iterator(): returns an iterator over the elements in the queue in proper sequence.
+
+The classes throw an NoSuchElementException if dequeue() or peek() is called on an empty queue.
