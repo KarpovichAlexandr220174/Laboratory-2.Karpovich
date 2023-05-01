@@ -5,8 +5,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         MyLinkedListStack<Integer> mlkd = new MyLinkedListStack<>();
-        System.out.println(mlkd.size());
-        System.out.println(mlkd.isEmpty());
         mlkd.push(1);
         mlkd.push(2);
         mlkd.push(3);
@@ -14,6 +12,9 @@ public class Main {
         System.out.println(mlkd.size());
         mlkd.pop();
         System.out.println(mlkd.peek());
+        mlkd.pop();
+        System.out.println(mlkd.peek());
+
 //        MyArrayListStack<Integer> mrlst = new MyArrayListStack<>();
 //        System.out.println(mrlst.isEmpty());
 //        mrlst.push(1);
